@@ -16862,8 +16862,6 @@ window.onload=function()
 				LoadLang('loc/'+lang+'.js?v='+Game.version,function(){
 					var launch=function(){
 						Game.Launch();
-						if (top!=self) Game.ErrorFrame();
-						else
 						{
 							console.log('[=== '+choose([
 								'Oh, hello!',
@@ -16874,8 +16872,6 @@ window.onload=function()
 							])+' ===]');
 							Game.Load(function(){Game.Init();if (firstLaunch) Game.showLangSelection(true);});
 							//try {Game.Load(Game.Init);}
-							//catch(err) {console.log('ERROR : '+err.message);}
-						}
 					}
 					if (App && App.loadMods) App.loadMods(launch);
 					else launch();
